@@ -2,6 +2,7 @@
 
 
 Author: Chen XU (email: 1536343106@qq.com)
+
 This the Peridynamic simulation of L-shaped panel test, using implicit arc-length method.
 
 
