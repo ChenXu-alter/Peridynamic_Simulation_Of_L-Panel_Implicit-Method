@@ -1,6 +1,5 @@
 ﻿// This program is used to simulate the L-shaped panel test in the implicit framework of peridynamic 
 // Author：Chen XU (1536343106@qq.com)
-// Version: Early Beta (too terrible，to much parameter tuning)
 // Environment configurations：
 //		Please firstly install Visual studio2017，then install Inter Fortran Parallel Studio2018 for integration
 //		Project→Properties→Inter Performance Library→Use Inter MKL：Parallel（注意配置为所有配置、平台为所有平台）
@@ -680,8 +679,8 @@ int main()
 					tol = etol;
 				if (loadstep >= 40 && iterstep >= 5)
 					tol = etol;
-				//in the soften stage, the number of iterative steps should be decreased, or the stiffness will be overestimated.
-				//it may be weird but works, if you have better strategy, please email me!
+				//in the soften stage, the number of iterative steps should be decreased, or the stiffness will be underestimated.
+				//This parameter tuning is weird but works, if you have better strategy, please email me!
 			}
 			std::cout << "loadstep" << loadstep << " iterstep" << iterstep << " tolerence is " << tol << " broken " << broken << std::endl;
 		}
